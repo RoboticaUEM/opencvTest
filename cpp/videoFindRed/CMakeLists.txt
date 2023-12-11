@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.4)
+project( findRed )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+set(SOURCES ${PROJECT_NAME}.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES})
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
