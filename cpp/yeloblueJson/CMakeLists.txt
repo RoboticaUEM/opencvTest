@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.4)
+project( yeloblueJson )
+find_package( OpenCV REQUIRED )
+find_package( nlohmann_json 3.10.5 REQUIRED)
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+set( SOURCES ${PROJECT_NAME}.cpp )
+add_executable( ${PROJECT_NAME} ${SOURCES} )
+target_link_libraries( ${PROJECT_NAME} ${OpenCV_LIBS} nlohmann_json::nlohmann_json )
